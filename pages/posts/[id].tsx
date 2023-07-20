@@ -2,8 +2,10 @@ import Layout from '../../components/layout'
 import Head from 'next/head';
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css';
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+import Date from '../../components/date';
 
-export default function Post({ postData }) {
+export default function Post({ postData }): React.ReactNode{
     return (
       <Layout>
         <Head>
